@@ -1,0 +1,27 @@
+# ---------- 基础数值 / 音频 I/O ----------
+numpy==1.22
+scipy
+soundfile                 # app.py 写 wav 用
+regex                     # utils.py: import regex as re（tag_cjke 依赖 \p{P}）
+
+# ---------- 网页服务 ----------
+gradio==4.44.1            # 与本项目代码、Gradio 4.44 端口行为绑定，勿随意升级
+gradio_client             # 外部 Python 调用 /tts 接口用
+
+# ---------- 多语言文本前端（text/ 目录） ----------
+unidecode                 # english.py / japanese.py
+inflect                   # english.py
+eng_to_ipa                # english.py
+pyopenjtalk-prebuilt      # japanese.py（提供 pyopenjtalk 模块；比源码编译省事）
+jamo                      # korean.py
+ko_pron                   # korean.py
+pypinyin                  # mandarin.py
+jieba                     # mandarin.py
+cn2an                     # mandarin.py
+indic_transliteration==2.3.37   # sanskrit.py
+num_thai==0.0.5           # thai.py
+
+# ---------- 可选：编译 monotonic_align 的 Cython 扩展 ----------
+# 不装也能跑：monotonic_align/__init__.py 会自动退回纯 numpy 实现 _pure.py，
+# 而推理路径本来就不调用 maximum_path，对合成结果没有任何影响。
+# Cython==0.29.21

@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Logs and local environments
+*.log
+venv/
+.venv/
+
+# Local model weights (download separately, see README)
+visual/G_latest.pth
